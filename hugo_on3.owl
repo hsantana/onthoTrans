@@ -4,7 +4,6 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY untitled-ontology-13 "http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#" >
@@ -17,7 +16,6 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:untitled-ontology-13="http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13"/>
     
@@ -175,7 +173,6 @@
 
     <owl:DatatypeProperty rdf:about="&untitled-ontology-13;type">
         <rdfs:domain rdf:resource="&untitled-ontology-13;PriceRelation"/>
-        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;foundedYear"/>
         <rdfs:range rdf:resource="&xsd;string"/>
     </owl:DatatypeProperty>
     
