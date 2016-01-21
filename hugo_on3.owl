@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY untitled-ontology-13 "http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/filip/ontologies/2016/0/untitled-ontology-13#"
+     xml:base="http://www.semanticweb.org/filip/ontologies/2016/0/untitled-ontology-13"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:untitled-ontology-13="http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#connects -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;connects">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Station"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#endsAt -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;endsAt">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Station"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Travel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#for -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;for">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Category"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;PriceRelation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#hasLines -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;hasLines">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Line"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;MetroSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#hasMetroSystem -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;hasMetroSystem">
+        <rdfs:range rdf:resource="&untitled-ontology-13;MetroSystem"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;TransportSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#hasPriceRelation -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;hasPriceRelation">
+        <rdfs:range rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;TransportSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#hasStations -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;hasStations">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;MetroSystem"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#passesThrough -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;passesThrough">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Line"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Station"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#permitsToMake -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;permitsToMake">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;MetroSystem"/>
+        <rdfs:range rdf:resource="&untitled-ontology-13;Travel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#startsAt -->
+
+    <owl:ObjectProperty rdf:about="&untitled-ontology-13;startsAt">
+        <rdfs:range rdf:resource="&untitled-ontology-13;Station"/>
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Travel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#cost -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;cost">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <rdfs:range rdf:resource="&xsd;double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#foundedYear -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;foundedYear">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Station"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#lastTrainTime -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;lastTrainTime">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Line"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#openingTime -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;openingTime">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;Line"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#type -->
+
+    <owl:DatatypeProperty rdf:about="&untitled-ontology-13;type">
+        <rdfs:domain rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <rdfs:subPropertyOf rdf:resource="&untitled-ontology-13;foundedYear"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Category -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Line -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Line"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#MetroSystem -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;MetroSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRelation -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;PriceRelation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Station -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Station"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#TransportSystem -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;TransportSystem"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Travel -->
+
+    <owl:Class rdf:about="&untitled-ontology-13;Travel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Bellas_Artes -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Bellas_Artes">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1983</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Colegio_De_Ingenieros"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Blue_Line -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Blue_Line">
+        <rdf:type rdf:resource="&untitled-ontology-13;Line"/>
+        <untitled-ontology-13:lastTrainTime rdf:datatype="&xsd;dateTimeStamp">24:00</untitled-ontology-13:lastTrainTime>
+        <untitled-ontology-13:openingTime rdf:datatype="&xsd;dateTimeStamp">5:00</untitled-ontology-13:openingTime>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Ciudad_Universitaria"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;El_Valle"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;La_Bandera"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Los_Simbolos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Caracas_Metro_System -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Caracas_Metro_System">
+        <rdf:type rdf:resource="&untitled-ontology-13;MetroSystem"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Bellas_Artes"/>
+        <untitled-ontology-13:hasLines rdf:resource="&untitled-ontology-13;Blue_Line"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Chacaito"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Ciudad_Universitaria"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Colegio_De_Ingenieros"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;El_Valle"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;La_Bandera"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Los_Simbolos"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Plaza_Venezuela"/>
+        <untitled-ontology-13:hasLines rdf:resource="&untitled-ontology-13;Red_Line"/>
+        <untitled-ontology-13:hasStations rdf:resource="&untitled-ontology-13;Sabana_Grande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Chacaito -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Chacaito">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1983</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Sabana_Grande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Ciudad_Universitaria -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Ciudad_Universitaria">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1984</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Los_Simbolos"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Plaza_Venezuela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Colegio_De_Ingenieros -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Colegio_De_Ingenieros">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1983</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Bellas_Artes"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Plaza_Venezuela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#El_Valle -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;El_Valle">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1984</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;La_Bandera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#La_Bandera -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;La_Bandera">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1984</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;El_Valle"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Los_Simbolos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Los_Simbolos -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Los_Simbolos">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1984</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Ciudad_Universitaria"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;La_Bandera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Normal -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Normal">
+        <rdf:type rdf:resource="&untitled-ontology-13;Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Plaza_Venezuela -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Plaza_Venezuela">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1983</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Colegio_De_Ingenieros"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Sabana_Grande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel1">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">500</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">month</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel2">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">50</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">day</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Student"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel3">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">80</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">day</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Normal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel4 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel4">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">700</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">month</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Normal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel5 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel5">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">50</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">day</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Retired"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#PriceRel6 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;PriceRel6">
+        <rdf:type rdf:resource="&untitled-ontology-13;PriceRelation"/>
+        <untitled-ontology-13:cost rdf:datatype="&xsd;integer">480</untitled-ontology-13:cost>
+        <untitled-ontology-13:type rdf:datatype="&xsd;string">month</untitled-ontology-13:type>
+        <untitled-ontology-13:for rdf:resource="&untitled-ontology-13;Retired"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Red_Line -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Red_Line">
+        <rdf:type rdf:resource="&untitled-ontology-13;Line"/>
+        <untitled-ontology-13:lastTrainTime rdf:datatype="&xsd;dateTimeStamp">24:00</untitled-ontology-13:lastTrainTime>
+        <untitled-ontology-13:openingTime rdf:datatype="&xsd;dateTimeStamp">5:00</untitled-ontology-13:openingTime>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Bellas_Artes"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Chacaito"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Colegio_De_Ingenieros"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Plaza_Venezuela"/>
+        <untitled-ontology-13:passesThrough rdf:resource="&untitled-ontology-13;Sabana_Grande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Retired -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Retired">
+        <rdf:type rdf:resource="&untitled-ontology-13;Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Route1 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Route1">
+        <rdf:type rdf:resource="&untitled-ontology-13;Travel"/>
+        <untitled-ontology-13:endsAt rdf:resource="&untitled-ontology-13;Ciudad_Universitaria"/>
+        <untitled-ontology-13:startsAt rdf:resource="&untitled-ontology-13;El_Valle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Route2 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Route2">
+        <rdf:type rdf:resource="&untitled-ontology-13;Travel"/>
+        <untitled-ontology-13:endsAt rdf:resource="&untitled-ontology-13;Chacaito"/>
+        <untitled-ontology-13:startsAt rdf:resource="&untitled-ontology-13;La_Bandera"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Route3 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Route3">
+        <rdf:type rdf:resource="&untitled-ontology-13;Travel"/>
+        <untitled-ontology-13:startsAt rdf:resource="&untitled-ontology-13;Bellas_Artes"/>
+        <untitled-ontology-13:endsAt rdf:resource="&untitled-ontology-13;Sabana_Grande"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Route4 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Route4">
+        <rdf:type rdf:resource="&untitled-ontology-13;Travel"/>
+        <untitled-ontology-13:startsAt rdf:resource="&untitled-ontology-13;Colegio_De_Ingenieros"/>
+        <untitled-ontology-13:endsAt rdf:resource="&untitled-ontology-13;El_Valle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Route5 -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Route5">
+        <rdf:type rdf:resource="&untitled-ontology-13;Travel"/>
+        <untitled-ontology-13:endsAt rdf:resource="&untitled-ontology-13;El_Valle"/>
+        <untitled-ontology-13:startsAt rdf:resource="&untitled-ontology-13;Los_Simbolos"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Sabana_Grande -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Sabana_Grande">
+        <rdf:type rdf:resource="&untitled-ontology-13;Station"/>
+        <untitled-ontology-13:foundedYear rdf:datatype="&xsd;integer">1983</untitled-ontology-13:foundedYear>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Chacaito"/>
+        <untitled-ontology-13:connects rdf:resource="&untitled-ontology-13;Plaza_Venezuela"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Student -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Student">
+        <rdf:type rdf:resource="&untitled-ontology-13;Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Venezuela_Transport_System -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Venezuela_Transport_System">
+        <rdf:type rdf:resource="&untitled-ontology-13;TransportSystem"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;Caracas_Metro_System"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel1"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel2"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel3"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel4"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel5"/>
+        <untitled-ontology-13:hasMetroSystem rdf:resource="&untitled-ontology-13;PriceRel6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hugo/ontologies/2016/0/untitled-ontology-13#Venezuelan_Transport_System -->
+
+    <owl:NamedIndividual rdf:about="&untitled-ontology-13;Venezuelan_Transport_System"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
